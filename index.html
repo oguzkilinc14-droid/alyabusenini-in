@@ -3,35 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>14 Şubat 💙</title>
+<title>Bu site sana Alya </title>
 
 <style>
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     background: #0b1c3d;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    color: white;
     text-align: center;
+    padding: 20px;
 }
 
-/* Fotoğraf */
-.photo {
-    width: 260px;
-    height: 260px;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: 0 0 25px rgba(255,255,255,0.3);
-    margin-bottom: 25px;
-    transition: 0.3s;
-}
-
-.photo:hover {
-    transform: scale(1.05);
+/* Neon efekt */
+h1, .note, .paragraph {
+    color: #6fd3ff;
+    text-shadow:
+        0 0 5px #6fd3ff,
+        0 0 10px #3bbcff,
+        0 0 20px #1aa8ff;
 }
 
 /* Buton */
@@ -41,20 +35,60 @@ button {
     border-radius: 30px;
     border: none;
     cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Not */
+.note {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Paragraf */
+.paragraph {
+    max-width: 500px;
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* Fotoğraf */
+.photo {
+    width: 260px;
+    height: 260px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 25px rgba(111, 211, 255, 0.5);
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.05);
 }
 </style>
 </head>
 <body>
 
-<h1>💙 14 Şubat 💙</h1>
+<h1>💙 14 Şubatın kutlu olsun 💙</h1>
 
-<!-- FOTOĞRAF -->
-<img src="foto.jpg" class="photo" alt="Fotoğraf">
-
-<!-- MÜZİK BUTONU -->
 <button id="musicBtn">🎵 Müziği Aç</button>
 
-<!-- MÜZİK -->
+<div class="note">
+    Bu şarkıcıyı çok seviyormuşsun diye duydum bu şarkısıda benden sana o zaman
+</div>
+
+<div class="paragraph">
+    Biliyorum daha yeni tanıştık ve daha sevgili değiliz
+    ama yinede 14 şubatta senin için küçük bişiyler
+    yapmak istedim 14 subatımız kutlu olsun,he bu arada
+    Ebru Gündeşle fotoğrafını buldum belki lazım olur sanada:)
+</div>
+
+<img src="foto.jpg" class="photo" alt="Fotoğraf">
+
 <audio id="bgMusic" loop>
     <source src="muzik.mp3.mp4" type="video/mp4">
 </audio>
@@ -76,3 +110,53 @@ button.onclick = function() {
 
 </body>
 </html>
+<!-- KARŞILAŞTIRMA TABLOSU -->
+<h2 style="
+color:#6fd3ff;
+text-shadow: 0 0 5px #6fd3ff, 0 0 10px #3bbcff, 0 0 20px #1aa8ff;
+margin-top:50px;
+">
+💙 Oğuz ❤️ Alya Karşılaştırma 💙
+</h2>
+
+<table style="
+width:90%;
+max-width:600px;
+margin-top:20px;
+border-collapse:collapse;
+color:#6fd3ff;
+text-shadow: 0 0 5px #6fd3ff;
+">
+
+<tr>
+<th style="border:1px solid #1aa8ff; padding:12px;">Konu</th>
+<th style="border:1px solid #1aa8ff; padding:12px;">Oğuz</th>
+<th style="border:1px solid #1aa8ff; padding:12px;">Alya</th>
+</tr>
+
+<tr>
+<td style="border:1px solid #1aa8ff; padding:10px;">Tatlılık</td>
+<td style="border:1px solid #1aa8ff; padding:10px;">😊</td>
+<td style="border:1px solid #1aa8ff; padding:10px;">😍👑</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #1aa8ff; padding:10px;">Romantiklik</td>
+<td style="border:1px solid #1aa8ff; padding:10px;">💙</td>
+<td style="border:1px solid #1aa8ff; padding:10px;">💙💙💙</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #1aa8ff; padding:10px;">Haklı Olma Oranı</td>
+<td style="border:1px solid #1aa8ff; padding:10px;">%5 😅</td>
+<td style="border:1px solid #1aa8ff; padding:10px;">%95 😌</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #1aa8ff; padding:10px;">En Çok Sevilen</td>
+<td style="border:1px solid #1aa8ff; padding:10px;">💙</td>
+<td style="border:1px solid #1aa8ff; padding:10px;">💙💙💙💙💙</td>
+</tr>
+
+</table>
+
