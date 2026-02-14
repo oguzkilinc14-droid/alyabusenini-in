@@ -3,68 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>14 Şubat 💖</title>
-
-<style>
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #0b1f3a, #162a4d, #1f3c73);
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(255,255,255,0.7);
-}
-
-img {
-    width: 300px;
-    max-width: 80%;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-    transition: 0.4s;
-}
-
-img:hover {
-    transform: scale(1.05);
-}
-</style>
+<title>14 Şubat 💙</title>
 </head>
-<body>
+<body style="background:#0b1f3a; color:white; text-align:center;">
 
 <h1>14 Şubatımız Kutlu Olsun 💘</h1>
 
-<img src="foto.jpg" alt="Bizim Fotoğrafımız">
+<img src="foto.jpg" width="300">
 
-<audio id="bgMusic" autoplay loop muted>
+<audio id="bgMusic" loop>
     <source src="muzik.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 const music = document.getElementById("bgMusic");
 
-// 1:36'dan başlasın
+// Metadata gelince 1:36'ya sar
 music.addEventListener("loadedmetadata", () => {
     music.currentTime = 96;
 });
 
-window.addEventListener("load", () => {
-    music.muted = false;
+// Çalmayı dene
+function startMusic() {
     music.volume = 0.4;
+    music.play().catch(() => {});
+}
 
-    music.play().catch(() => {
-        document.addEventListener("click", () => {
-            music.play();
-        }, { once: true });
-    });
-});
+// Sayfa yüklenince dene
+window.addEventListener("load", startMusic);
+
+// Eğer engellenirse ilk herhangi bir etkileşimde başlat
+document.addEventListener("click", startMusic, { once: true });
+document.addEventListener("touchstart", startMusic, { once: true });
 </script>
 
 </body>
