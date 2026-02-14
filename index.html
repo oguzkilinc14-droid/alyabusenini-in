@@ -9,7 +9,7 @@
 body {
     margin: 0;
     height: 100vh;
-    background: #0b1c3d; /* Lacivert */
+    background: #0b1c3d;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,46 +38,40 @@ body {
 button {
     padding: 15px 30px;
     font-size: 18px;
-    border: none;
     border-radius: 30px;
-    background: white;
-    color: #0b1c3d;
+    border: none;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.1);
 }
 </style>
 </head>
 <body>
 
-<h1>💙 14 Şubat Sürprizi 💙</h1>
+<h1>💙 14 Şubat 💙</h1>
 
-<img src="foto.jpg" alt="Bizim Fotoğrafımız" class="photo">
+<!-- FOTOĞRAF -->
+<img src="foto.jpg" class="photo" alt="Fotoğraf">
 
-<button onclick="toggleMusic()" id="musicBtn">
-🎵 Müziği Aç
-</button>
+<!-- MÜZİK BUTONU -->
+<button id="musicBtn">🎵 Müziği Aç</button>
 
+<!-- MÜZİK -->
 <audio id="bgMusic" loop>
-    <source src="muzik.mp3" type="audio/mp3">
+    <source src="muzik.mp3.mp4" type="video/mp4">
 </audio>
 
 <script>
 const music = document.getElementById("bgMusic");
 const button = document.getElementById("musicBtn");
 
-function toggleMusic() {
+button.onclick = function() {
     if (music.paused) {
         music.play();
-        button.innerHTML = "⏸ Müziği Kapat";
+        button.textContent = "⏸ Müziği Kapat";
     } else {
         music.pause();
-        button.innerHTML = "🎵 Müziği Aç";
+        button.textContent = "🎵 Müziği Aç";
     }
-}
+};
 </script>
 
 </body>
